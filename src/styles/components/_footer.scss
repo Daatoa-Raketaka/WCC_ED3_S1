@@ -12,6 +12,7 @@ footer {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  color: $white;
 
   .facebook-icon {
     margin-right: 15px;
@@ -31,6 +32,11 @@ footer {
       font-size: 16px;
       @include architects_font_family();
       width: 150px;
+      color: $white;
+
+      &::placeholder {
+        color: $white;
+      }
     }
   }
 }

@@ -1,0 +1,115 @@
+@import "../partials/sizes";
+@import "../partials/font-variables";
+
+.shadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $shadow;
+  clip-path: polygon(0% 0%,
+      100vw 0%,
+      100vw 60vh,
+      50vw 40vh,
+      0% 60vh);
+
+  .mobile-welcoming {
+    @include architects_font_family();
+    display: inherit;
+    font-size: 26px;
+    width: max-content;
+    height: max-content;
+    position: absolute;
+    top: 40vh;
+    left: 50vw;
+    color: $white;
+    transform: translateY(calc(-100% - 40px)) translateX(-50%);
+  }
+}
+
+.mobile-main-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  height: max-content;
+  position: absolute;
+  top: 40vh;
+  left: 50vw;
+  transform: translateY(calc(100%)) translateX(-50%);
+
+  p {
+    @include architects_font_family();
+    font-size: 30px;
+    text-align: center;
+    color: $white;
+  }
+
+  .first-title {
+    width: max-content;
+    border: none;
+    border-bottom: 1.5px solid $white;
+  }
+}
+
+.desk-first-title,
+.desk-second-title {
+  display: none;
+}
+
+@media screen and (min-width: $tablet-endpoint) {
+  .shadow {
+    $from-center-distance: 10vw;
+    clip-path: polygon(0% 0%,
+        calc(50vw + $from-center-distance) 0%,
+        calc(50vw - $from-center-distance) 100vh, 0% 100vh);
+
+    .mobile-welcoming {
+      display: none;
+    }
+  }
+
+  .mobile-main-title {
+    display: none;
+  }
+
+  .desk-first-title {
+    @include architects_font_family();
+    display: inherit;
+    font-size: 34px;
+    width: max-content;
+    height: max-content;
+    background-color: $white;
+    color: $shadow;
+    padding: 5px 20px 5px 10px;
+    clip-path: polygon(0% 0%,
+      100% 0%,
+      91.5% 100%,
+      0% 100%);
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translateX(calc(-100% + 8px)) translateY(-100%);
+  }
+
+  .desk-second-title {
+    @include architects_font_family();
+    display: inherit;
+    font-size: 34px;
+    width: max-content;
+    height: max-content;
+    background-color: $shadow;
+    color: $white;
+    padding: 5px 10px 5px 20px;
+    clip-path: polygon(6.5% 0%,
+      100% 0%,
+      100% 100%,
+      0% 100%);
+    position: absolute;
+    top: 50vh;
+    right: 50vw;
+    transform: translateX(calc(100% - 8px));
+  }
+}

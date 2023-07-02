@@ -23,9 +23,122 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
+  background-image: url("../../../assets/img/yasmine-arfaoui-G40jEUyEsEk-unsplash.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
 }
 
 /* Components */
+.shadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(37, 55, 64, 0.4784313725);
+  -webkit-clip-path: polygon(0% 0%, 100vw 0%, 100vw 60vh, 50vw 40vh, 0% 60vh);
+          clip-path: polygon(0% 0%, 100vw 0%, 100vw 60vh, 50vw 40vh, 0% 60vh);
+}
+.shadow .mobile-welcoming {
+  font-family: "Architects Daughter", sans-serif;
+  font-display: swap;
+  display: inherit;
+  font-size: 26px;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+  position: absolute;
+  top: 40vh;
+  left: 50vw;
+  color: #fff;
+  transform: translateY(calc(-100% - 40px)) translateX(-50%);
+}
+
+.mobile-main-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+  position: absolute;
+  top: 40vh;
+  left: 50vw;
+  transform: translateY(100%) translateX(-50%);
+}
+.mobile-main-title p {
+  font-family: "Architects Daughter", sans-serif;
+  font-display: swap;
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+}
+.mobile-main-title .first-title {
+  width: -moz-max-content;
+  width: max-content;
+  border: none;
+  border-bottom: 1.5px solid #fff;
+}
+
+.desk-first-title,
+.desk-second-title {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .shadow {
+    -webkit-clip-path: polygon(0% 0%, 60vw 0%, 40vw 100vh, 0% 100vh);
+            clip-path: polygon(0% 0%, 60vw 0%, 40vw 100vh, 0% 100vh);
+  }
+  .shadow .mobile-welcoming {
+    display: none;
+  }
+  .mobile-main-title {
+    display: none;
+  }
+  .desk-first-title {
+    font-family: "Architects Daughter", sans-serif;
+    font-display: swap;
+    display: inherit;
+    font-size: 34px;
+    width: -moz-max-content;
+    width: max-content;
+    height: -moz-max-content;
+    height: max-content;
+    background-color: #fff;
+    color: rgba(37, 55, 64, 0.4784313725);
+    padding: 5px 20px 5px 10px;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 91.5% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 0%, 91.5% 100%, 0% 100%);
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translateX(calc(-100% + 8px)) translateY(-100%);
+  }
+  .desk-second-title {
+    font-family: "Architects Daughter", sans-serif;
+    font-display: swap;
+    display: inherit;
+    font-size: 34px;
+    width: -moz-max-content;
+    width: max-content;
+    height: -moz-max-content;
+    height: max-content;
+    background-color: rgba(37, 55, 64, 0.4784313725);
+    color: #fff;
+    padding: 5px 10px 5px 20px;
+    -webkit-clip-path: polygon(6.5% 0%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(6.5% 0%, 100% 0%, 100% 100%, 0% 100%);
+    position: absolute;
+    top: 50vh;
+    right: 50vw;
+    transform: translateX(calc(100% - 8px));
+  }
+}
 header {
   position: relative;
   width: 100vw;
@@ -53,9 +166,11 @@ header .multi-lang .text {
   font-size: 16px;
   font-family: "Architects Daughter", sans-serif;
   font-display: swap;
+  color: #fff;
 }
 header .multi-lang .icon {
   margin-left: 10px;
+  color: #fff;
 }
 header .multi-lang .langs {
   position: absolute;
@@ -69,6 +184,8 @@ header .multi-lang .langs {
   border-radius: 5px;
   transform: translateY(calc(100% + 10px));
   transition: height 0.3s;
+  background-color: #31576A;
+  color: #fff;
 }
 header .multi-lang .langs.active {
   display: block;
@@ -95,9 +212,10 @@ header .burger-btn {
   padding: 5px;
   border-radius: 3px;
   transition: border 0.3s;
+  color: #fff;
 }
 header .burger-btn:hover {
-  border: 0.5px solid black;
+  border: 0.5px solid #fff;
 }
 header .navbar {
   position: fixed;
@@ -108,6 +226,7 @@ header .navbar {
   border-radius: 0 0 0 100vw;
   transition: all 0.3s;
   overflow: auto;
+  background-color: #31576A;
 }
 header .navbar.active {
   width: 100vw;
@@ -127,6 +246,7 @@ header .navbar .navbar-link {
   justify-content: flex-end;
   align-items: center;
   cursor: pointer;
+  color: #fff;
 }
 header .navbar .navbar-exit .text,
 header .navbar .navbar-link .text {
@@ -225,6 +345,7 @@ footer {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  color: #fff;
 }
 footer .facebook-icon {
   margin-right: 15px;
@@ -244,6 +365,13 @@ footer .input-container #suggestion-input {
   font-family: "Architects Daughter", sans-serif;
   font-display: swap;
   width: 150px;
+  color: #fff;
+}
+footer .input-container #suggestion-input::-moz-placeholder {
+  color: #fff;
+}
+footer .input-container #suggestion-input::placeholder {
+  color: #fff;
 }
 
 @media screen and (min-width: 1024px) {
