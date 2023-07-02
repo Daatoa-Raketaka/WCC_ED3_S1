@@ -1,0 +1,145 @@
+/* Here are Colors variables */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+  outline: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html,
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Components */
+header {
+  position: relative;
+  width: 100vw;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 25px;
+}
+header .multi-lang {
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+header .multi-lang .text {
+  font-size: 16px;
+  font-family: "Architects Daughter", sans-serif;
+  font-display: swap;
+}
+header .multi-lang .icon {
+  margin-left: 10px;
+}
+header .multi-lang .langs {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+  border-radius: 5px;
+  transform: translateY(calc(100% + 10px));
+  transition: height 0.3s;
+}
+header .multi-lang .langs.active {
+  display: block;
+}
+header .multi-lang .langs .lang {
+  position: relative;
+  font-size: 16px;
+  font-family: "Architects Daughter", sans-serif;
+  font-display: swap;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+header .burger-btn {
+  position: relative;
+  margin-block: 20px;
+  cursor: pointer;
+  display: flex;
+  border: 0.5px solid transparent;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: 3px;
+  transition: border 0.3s;
+}
+header .burger-btn:hover {
+  border: 0.5px solid black;
+}
+header .navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-radius: 0 0 0 100vw;
+  transition: all 0.3s;
+  overflow: auto;
+}
+header .navbar.active {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+}
+header .navbar .navbar-exit,
+header .navbar .navbar-link {
+  position: relative;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  margin-block: 5px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+header .navbar .navbar-exit .text,
+header .navbar .navbar-link .text {
+  font-size: 20px;
+  font-family: "Architects Daughter", sans-serif;
+  font-display: swap;
+}
+header .navbar .navbar-exit .icon,
+header .navbar .navbar-link .icon {
+  margin-left: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    display: none;
+  }
+}/*# sourceMappingURL=main.css.map */

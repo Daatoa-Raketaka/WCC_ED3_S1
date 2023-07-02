@@ -1,0 +1,121 @@
+@import "../partials/sizes";
+@import "../partials/font-variables";
+
+header {
+  position: relative;
+  width: 100vw;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: $header-inline-padding;
+
+  .multi-lang {
+    position: relative;
+    width: max-content;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    .text {
+      font-size: 16px;
+      @include architects_font_amily();
+    }
+
+    .icon {
+      margin-left: 10px;
+    }
+
+    .langs {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: none;
+      width: max-content;
+      height: max-content;
+      border-radius: 5px;
+      transform: translateY(calc(100% + 10px));
+      transition: height .3s;
+
+      &.active {
+        display: block;
+      }
+
+      .lang {
+        position: relative;
+        font-size: 16px;
+        @include architects_font_amily();
+        width: 100%;
+        height: max-content;
+        padding: 10px 15px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .burger-btn {
+    position: relative;
+    margin-block: 20px;
+    cursor: pointer;
+    display: flex;
+    border: .5px solid transparent;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 3px;
+    transition: border .3s;
+
+    &:hover {
+      border: .5px solid black;
+    }
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-radius: 0 0 0 100vw;
+    transition: all .3s;
+    overflow: auto;
+
+    &.active {
+      width: 100vw;
+      height: 100vh;
+      border-radius: 0;
+    }
+
+    .navbar-exit,
+    .navbar-link {
+      position: relative;
+      width: 100%;
+      height: max-content;
+      margin-block: 5px;
+      padding: 10px 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+
+      .text {
+        font-size: 20px;
+        @include architects_font_amily();
+      }
+
+      .icon {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $tablet-endpoint) {
+  header {
+    display: none;
+  }
+}
