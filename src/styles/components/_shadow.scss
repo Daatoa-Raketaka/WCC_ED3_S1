@@ -39,6 +39,21 @@
   top: 40vh;
   left: 50vw;
   transform: translateY(calc(100%)) translateX(-50%);
+  @keyframes fade-in-bottom {
+    from {
+      opacity: 0;
+      transform: translateY(calc(100% - 50px)) translateX(-50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(calc(100%)) translateX(-50%);
+    }
+  }
+
+  animation-name: fade-in-bottom;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
 
   p {
     @include architects_font_family();
@@ -85,13 +100,31 @@
     color: $shadow;
     padding: 5px 20px 5px 10px;
     clip-path: polygon(0% 0%,
-      100% 0%,
-      91.5% 100%,
-      0% 100%);
+        100% 0%,
+        91.5% 100%,
+        0% 100%);
     position: absolute;
     top: 50vh;
     left: 50vw;
     transform: translateX(calc(-100% + 8px)) translateY(-100%);
+
+    @keyframes fade-in-left {
+      from {
+        opacity: 0;
+        transform: translateX(calc(-100% + 50px)) translateY(-100%);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(calc(-100% + 8px)) translateY(-100%);
+        ;
+      }
+    }
+
+    animation-name: fade-in-left;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
   }
 
   .desk-second-title {
@@ -104,12 +137,30 @@
     color: $white;
     padding: 5px 10px 5px 20px;
     clip-path: polygon(6.5% 0%,
-      100% 0%,
-      100% 100%,
-      0% 100%);
+        100% 0%,
+        100% 100%,
+        0% 100%);
     position: absolute;
     top: 50vh;
     right: 50vw;
     transform: translateX(calc(100% - 8px));
+
+    @keyframes fade-in-right {
+      from {
+        opacity: 0;
+        transform: translateX(calc(100% - 50px));
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(calc(100% - 8px));
+        ;
+      }
+    }
+
+    animation-name: fade-in-right;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
   }
 }
