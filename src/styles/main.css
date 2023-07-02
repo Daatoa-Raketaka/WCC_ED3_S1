@@ -143,4 +143,31 @@ header .navbar .navbar-link .icon {
   header {
     display: none;
   }
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: red;
+  padding-block: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+footer .input-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+footer .input-container #suggestion-input {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid black;
 }/*# sourceMappingURL=main.css.map */
