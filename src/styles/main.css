@@ -144,6 +144,75 @@ header .navbar .navbar-link .icon {
     display: none;
   }
 }
+.floating-navbar {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .floating-navbar {
+    position: absolute;
+    top: 50vh;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: -moz-max-content;
+    width: max-content;
+    height: -moz-max-content;
+    height: max-content;
+    background-color: rgba(37, 55, 64, 0.4784313725);
+    transform: translateY(-50%);
+    border-radius: 13px;
+    border: 1px solid white;
+  }
+  .floating-navbar * {
+    font-family: "Architects Daughter", sans-serif;
+    font-display: swap;
+  }
+  .floating-navbar .link {
+    position: relative;
+    margin-block: 5px;
+    color: #fff;
+  }
+  .floating-navbar .link .icon {
+    cursor: pointer;
+  }
+  .floating-navbar .link .info {
+    display: none;
+  }
+  .floating-navbar .link .info.active {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    transform: translateX(calc(100% + 20px)) translateY(0);
+    background-color: rgba(37, 55, 64, 0.4784313725);
+    width: -moz-max-content;
+    width: max-content;
+    height: 26px; /* Raha sendra mamaky an'ity lah de 26px ny taille anle icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 8px;
+    font-size: 14px;
+    border-radius: 3px;
+    border: 1px solid #fff;
+  }
+  .floating-navbar .link .info.active::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+    transform: translateY(8px) translateX(-5px) rotateZ(-45deg);
+    background-color: #fff;
+    z-index: -100;
+  }
+}
 footer {
   position: absolute;
   bottom: 0;
