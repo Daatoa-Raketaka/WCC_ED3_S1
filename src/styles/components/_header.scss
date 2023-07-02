@@ -23,7 +23,7 @@ header {
 
     .text {
       font-size: 16px;
-      @include architects_font_amily();
+      @include architects_font_family();
     }
 
     .icon {
@@ -48,7 +48,7 @@ header {
       .lang {
         position: relative;
         font-size: 16px;
-        @include architects_font_amily();
+        @include architects_font_family();
         width: 100%;
         height: max-content;
         padding: 10px 15px;
@@ -105,7 +105,7 @@ header {
 
       .text {
         font-size: 20px;
-        @include architects_font_amily();
+        @include architects_font_family();
       }
 
       .icon {
