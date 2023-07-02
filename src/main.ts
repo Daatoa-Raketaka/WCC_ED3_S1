@@ -9,6 +9,8 @@ const sarety = document.getElementById('sarety') as HTMLElement
 const overlay = document.querySelector('.overlay') as HTMLElement
 const progress = document.querySelector('.progress .bar') as HTMLElement
 
+const pNum = document.getElementById('p-num') as HTMLElement
+
 const cameraNav = {
     home: {
         look: new Vector3(800, 50, -1200),
@@ -83,8 +85,10 @@ fbxLoader.load('/assets/3D/Menabe.fbx', (obj: Group) => {
     overlay.style.opacity = '0'
     
 }, (ev) => {
+    const loaded = (ev.loaded * 100) / ev.total
     document.body.style.backgroundImage = 'none'
-    progress.style.width = (ev.loaded * 100) / ev.total + '%'
+    progress.style.width = loaded + '%'
+    pNum.innerText = loaded.toFixed(1) + '%'
 })
 
 /** Emit and receive shadow **/
