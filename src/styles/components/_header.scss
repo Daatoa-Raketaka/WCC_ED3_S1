@@ -24,10 +24,12 @@ header {
     .text {
       font-size: 16px;
       @include architects_font_family();
+      color: $white;
     }
 
     .icon {
       margin-left: 10px;
+      color: $white;
     }
 
     .langs {
@@ -40,6 +42,8 @@ header {
       border-radius: 5px;
       transform: translateY(calc(100% + 10px));
       transition: height .3s;
+      background-color: $dark-blue;
+      color: $white;
 
       &.active {
         display: block;
@@ -68,9 +72,10 @@ header {
     padding: 5px;
     border-radius: 3px;
     transition: border .3s;
+    color: $white;
 
     &:hover {
-      border: .5px solid black;
+      border: .5px solid $white;
     }
   }
 
@@ -83,6 +88,7 @@ header {
     border-radius: 0 0 0 100vw;
     transition: all .3s;
     overflow: auto;
+    background-color: $dark-blue;
 
     &.active {
       width: 100vw;
@@ -102,6 +108,7 @@ header {
       justify-content: flex-end;
       align-items: center;
       cursor: pointer;
+      color: $white;
 
       .text {
         font-size: 20px;
