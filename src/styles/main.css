@@ -69,6 +69,20 @@ body {
   top: 40vh;
   left: 50vw;
   transform: translateY(100%) translateX(-50%);
+  animation-name: fade-in-bottom;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+@keyframes fade-in-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(calc(100% - 50px)) translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(100%) translateX(-50%);
+  }
 }
 .mobile-main-title p {
   font-family: "Architects Daughter", sans-serif;
@@ -118,6 +132,20 @@ body {
     top: 50vh;
     left: 50vw;
     transform: translateX(calc(-100% + 8px)) translateY(-100%);
+    animation-name: fade-in-left;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+  }
+  @keyframes fade-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(calc(-100% + 50px)) translateY(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(calc(-100% + 8px)) translateY(-100%);
+    }
   }
   .desk-second-title {
     font-family: "Architects Daughter", sans-serif;
@@ -137,6 +165,20 @@ body {
     top: 50vh;
     right: 50vw;
     transform: translateX(calc(100% - 8px));
+    animation-name: fade-in-right;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+  }
+  @keyframes fade-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(calc(100% - 50px));
+    }
+    to {
+      opacity: 1;
+      transform: translateX(calc(100% - 8px));
+    }
   }
 }
 header {
