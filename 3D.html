@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/3D.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/main.css">
+
+    <title>Fokontany Soatanimbary</title>
+  </head>
+  <body class="3D-body">
+    <canvas id="bg"></canvas>
+
+    <div class="overlay">
+      <h3>Afaka mijery ny Fandraisana, Mombamomba ary ny Servisy ianao.</h3>
+      <div class="progress">
+        <div class="bar"></div>
+      </div>
+    </div>
+
+
+    <!-- Shadow clip path -->
+  <div class="shadow">
+    <p class="mobile-welcoming">Tongasoa eto amin'ny</p>
+    <p class="desk-first-title">FOKONTANY</p>
+  </div>
+  <div class="mobile-main-title">
+    <p class="first-title">FOKONTANY</p>
+    <p class="second-title">SOATANIMBARY</p>
+  </div>
+  <p class="desk-second-title">SOATANIMBARY</p>
+
+  <!-- Header -->
+  <header>
+    <!-- Multilang -->
+    <div class="multi-lang">
+      <p class="text">Fiteny</p>
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 1024 1024">
+        <path fill="currentColor"
+          d="M831.872 340.864L512 652.672L192.128 340.864a30.592 30.592 0 0 0-42.752 0a29.12 29.12 0 0 0 0 41.6L489.664 714.24a32 32 0 0 0 44.672 0l340.288-331.712a29.12 29.12 0 0 0 0-41.728a30.592 30.592 0 0 0-42.752 0z" />
+      </svg>
+      <div class="langs">
+        <p class="lang">Malagasy</p>
+        <p class="lang">Frantsay</p>
+        <p class="lang">Anglisy</p>
+      </div>
+    </div>
+    <!-- Burger button -->
+    <div class="burger-btn">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+        <path fill="currentColor"
+          d="M22 18.005c0 .55-.446.995-.995.995h-8.01a.995.995 0 0 1 0-1.99h8.01c.55 0 .995.445.995.995ZM22 12c0 .55-.446.995-.995.995H2.995a.995.995 0 1 1 0-1.99h18.01c.55 0 .995.446.995.995Zm-.995-5.01a.995.995 0 0 0 0-1.99H8.995a.995.995 0 1 0 0 1.99h12.01Z" />
+      </svg>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <p class="navbar-exit">
+        <span class="text">Hiverina</span>
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 256 256">
+          <path fill="currentColor"
+            d="m218.83 130.83l-72 72a4 4 0 0 1-5.66-5.66L206.34 132H40a4 4 0 0 1 0-8h166.34l-65.17-65.17a4 4 0 0 1 5.66-5.66l72 72a4 4 0 0 1 0 5.66Z" />
+        </svg>
+      </p>
+      <p class="navbar-link">
+        <span class="text">Fandraisana</span>
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 21 21">
+          <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m1.5 10.5l9-9l9 9" />
+            <path d="M3.5 8.5v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" />
+          </g>
+        </svg>
+      </p>
+      <p class="navbar-link">
+        <span class="text">Mombamomba</span>
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 256 256">
+          <path fill="currentColor"
+            d="M140 176a4 4 0 0 1-4 4a12 12 0 0 1-12-12v-40a4 4 0 0 0-4-4a4 4 0 0 1 0-8a12 12 0 0 1 12 12v40a4 4 0 0 0 4 4a4 4 0 0 1 4 4Zm-16-84a8 8 0 1 0-8-8a8 8 0 0 0 8 8Zm104 36A100 100 0 1 1 128 28a100.11 100.11 0 0 1 100 100Zm-8 0a92 92 0 1 0-92 92a92.1 92.1 0 0 0 92-92Z" />
+        </svg>
+      </p>
+      <p class="navbar-link">
+        <span class="text">Misy azy</span>
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 48 48">
+          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+            d="M24 4.5a13.101 13.101 0 0 0-13.101 13.101c0 10.253 10.002 22.591 12.623 25.622a.809.809 0 0 0 1.139.08l.08-.08C27.327 40.18 37.1 27.854 37.1 17.6A13.101 13.101 0 0 0 24 4.5Zm0 16.656a4.443 4.443 0 1 1 4.443-4.443v.011A4.443 4.443 0 0 1 24 21.156Z" />
+        </svg>
+      </p>
+      <p class="navbar-link">
+        <span class="text">Fikarohana</span>
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M20.031 20.79c.46.46 1.17-.25.71-.7l-3.75-3.76a7.904 7.904 0 0 0 2.04-5.31c0-4.39-3.57-7.96-7.96-7.96s-7.96 3.57-7.96 7.96c0 4.39 3.57 7.96 7.96 7.96c1.98 0 3.81-.73 5.21-1.94l3.75 3.75zM4.11 11.02c0-3.84 3.13-6.96 6.96-6.96c3.84 0 6.96 3.12 6.96 6.96s-3.12 6.96-6.96 6.96c-3.83 0-6.96-3.12-6.96-6.96z" />
+        </svg>
+      </p>
+      <p class="navbar-link">
+        <span class="text">Servisy</span>
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24">
+          <path fill="currentColor" fill-rule="evenodd"
+            d="M9 1H1v8h8V6h2v14h4v3h8v-8h-8v3h-2V6h2v3h8V1h-8v3H9V1Zm12 2h-4v4h4V3Zm-4 14h4v4h-4v-4Z"
+            clip-rule="evenodd" />
+        </svg>
+      </p>
+      <p class="navbar-link">
+        <span class="text">3D</span>
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 100 100">
+          <defs>
+            <path id="gisCube3d0" fill="#000" fill-opacity="1" fill-rule="evenodd" stroke="#000" stroke-opacity="1"
+              stroke-width="1pt" d="m5.77 0l-8.65 5V-5Z" />
+          </defs>
+          <defs>
+            <marker id="gisCube3d1" orient="auto" refX="0" refY="0">
+              <path id="gisCube3d2" fill="#000" fill-opacity="1" fill-rule="evenodd" stroke="#000" stroke-opacity="1"
+                stroke-width="1pt" d="m5.77 0l-8.65 5V-5l8.65 5z" transform="scale(.25)" />
+            </marker>
+            <marker id="gisCube3d3" orient="auto" refX="0" refY="0">
+              <use href="#gisCube3d0" fill-rule="evenodd" stroke-width="1pt" transform="scale(.25)" />
+            </marker>
+            <marker id="gisCube3d4" orient="auto" refX="0" refY="0">
+              <use href="#gisCube3d0" id="gisCube3d5" fill-opacity="1" fill-rule="evenodd" stroke-opacity="1"
+                stroke-width="1pt" transform="scale(.25)" />
+            </marker>
+          </defs>
+          <path id="gisCube3d6" fill="currentColor" fill-opacity="1" fill-rule="evenodd" stroke="none"
+            stroke-dasharray="none" stroke-dashoffset="0" stroke-linecap="butt" stroke-linejoin="miter"
+            stroke-miterlimit="4" stroke-opacity="1" stroke-width="5"
+            d="m50 1.18l-.72 1.25l-6.973 12.062H47.5v42.98l-37.223 21.49l-2.597-4.498L0 87.783h1.441l13.934.008l-2.598-4.498L50 61.803l37.223 21.49l-2.598 4.498L100 87.783l-.72-1.25l-6.96-12.069l-2.597 4.499L52.5 57.473V14.491h5.193z"
+            color="currentColor" color-interpolation="sRGB" color-rendering="auto" display="inline" vector-effect="none"
+            visibility="visible" />
+          <path id="gisCube3d7" fill="currentColor" fill-opacity="1" fill-rule="evenodd" stroke="none"
+            stroke-dasharray="none" stroke-dashoffset="0" stroke-linecap="butt" stroke-linejoin="round"
+            stroke-miterlimit="4" stroke-opacity="1" stroke-width="3.618"
+            d="M49.058 28.451L19.812 47.63c-.674.487-.855 1.041-.867 1.545v28.66c0 .63.328 1.216.867 1.545l29.246 19.178c.705.385 1.422.32 1.898-.01L80.188 79.38a1.81 1.81 0 0 0 .867-1.545v-28.66c-.006-.764-.33-1.167-.895-1.564l-29.218-19.16c-.696-.397-1.242-.208-1.884 0zm.942 3.66l25.515 16.906l-25.531 17.206L24.23 49.174ZM22.56 52.394L48.192 69.37v24.425l-25.63-16.976Zm54.88 0v24.424L51.808 93.794V69.368Z"
+            color="currentColor" color-interpolation="sRGB" color-rendering="auto" display="inline" vector-effect="none"
+            visibility="visible" />
+        </svg>
+      </p>
+      <p class="navbar-link">
+        <span class="text">Sign in</span>
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M19 11h-5.586l1.293-1.293a1 1 0 0 0-1.414-1.414l-3 3a1 1 0 0 0 0 1.414l3 3a1 1 0 0 0 1.414-1.414L13.414 13H19a1 1 0 0 0 0-2Z" />
+          <path fill="currentColor"
+            d="m13.414 13l1.293 1.293a1 1 0 1 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.414l3-3a1 1 0 0 1 1.414 1.414L13.414 11H18V5a3.003 3.003 0 0 0-3-3H7a3.003 3.003 0 0 0-3 3v14a3.003 3.003 0 0 0 3 3h8a3.003 3.003 0 0 0 3-3v-6Z"
+            opacity=".5" />
+        </svg>
+      </p>
+
+    </nav>
+  </header>
+
+  <!-- Floating navbar -->
+  <div class="floating-navbar">
+    <!-- Home -->
+    <div class="link" id="home">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 21 21">
+        <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m1.5 10.5l9-9l9 9" />
+          <path d="M3.5 8.5v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" />
+        </g>
+      </svg>
+      <p class="info">Fandraisana</p>
+    </div>
+    <!-- About -->
+    <div class="link" id="sarety">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 256 256">
+        <path fill="currentColor"
+          d="M140 176a4 4 0 0 1-4 4a12 12 0 0 1-12-12v-40a4 4 0 0 0-4-4a4 4 0 0 1 0-8a12 12 0 0 1 12 12v40a4 4 0 0 0 4 4a4 4 0 0 1 4 4Zm-16-84a8 8 0 1 0-8-8a8 8 0 0 0 8 8Zm104 36A100 100 0 1 1 128 28a100.11 100.11 0 0 1 100 100Zm-8 0a92 92 0 1 0-92 92a92.1 92.1 0 0 0 92-92Z" />
+      </svg>
+      <p class="info">Mombamomba</p>
+    </div>
+    <!-- Maps -->
+    <div class="link">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 48 48">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+          d="M24 4.5a13.101 13.101 0 0 0-13.101 13.101c0 10.253 10.002 22.591 12.623 25.622a.809.809 0 0 0 1.139.08l.08-.08C27.327 40.18 37.1 27.854 37.1 17.6A13.101 13.101 0 0 0 24 4.5Zm0 16.656a4.443 4.443 0 1 1 4.443-4.443v.011A4.443 4.443 0 0 1 24 21.156Z" />
+      </svg>
+      <p class="info">Misy azy</p>
+    </div>
+    <!-- Search -->
+    <div class="link">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24">
+        <path fill="currentColor"
+          d="M20.031 20.79c.46.46 1.17-.25.71-.7l-3.75-3.76a7.904 7.904 0 0 0 2.04-5.31c0-4.39-3.57-7.96-7.96-7.96s-7.96 3.57-7.96 7.96c0 4.39 3.57 7.96 7.96 7.96c1.98 0 3.81-.73 5.21-1.94l3.75 3.75zM4.11 11.02c0-3.84 3.13-6.96 6.96-6.96c3.84 0 6.96 3.12 6.96 6.96s-3.12 6.96-6.96 6.96c-3.83 0-6.96-3.12-6.96-6.96z" />
+      </svg>
+      <p class="info">Fikarohana</p>
+    </div>
+    <!-- Services -->
+    <div class="link" id="way">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24">
+        <path fill="currentColor" fill-rule="evenodd"
+          d="M9 1H1v8h8V6h2v14h4v3h8v-8h-8v3h-2V6h2v3h8V1h-8v3H9V1Zm12 2h-4v4h4V3Zm-4 14h4v4h-4v-4Z"
+          clip-rule="evenodd" />
+      </svg>
+      <p class="info">Servisy</p>
+    </div>
+    <!-- 3D -->
+    <div class="link" onclick="location.href = '/'">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 100 100">
+        <defs>
+          <path id="gisCube3d0" fill="#000" fill-opacity="1" fill-rule="evenodd" stroke="#000" stroke-opacity="1"
+            stroke-width="1pt" d="m5.77 0l-8.65 5V-5Z" />
+        </defs>
+        <defs>
+          <marker id="gisCube3d1" orient="auto" refX="0" refY="0">
+            <path id="gisCube3d2" fill="#000" fill-opacity="1" fill-rule="evenodd" stroke="#000" stroke-opacity="1"
+              stroke-width="1pt" d="m5.77 0l-8.65 5V-5l8.65 5z" transform="scale(.25)" />
+          </marker>
+          <marker id="gisCube3d3" orient="auto" refX="0" refY="0">
+            <use href="#gisCube3d0" fill-rule="evenodd" stroke-width="1pt" transform="scale(.25)" />
+          </marker>
+          <marker id="gisCube3d4" orient="auto" refX="0" refY="0">
+            <use href="#gisCube3d0" id="gisCube3d5" fill-opacity="1" fill-rule="evenodd" stroke-opacity="1"
+              stroke-width="1pt" transform="scale(.25)" />
+          </marker>
+        </defs>
+        <path id="gisCube3d6" fill="currentColor" fill-opacity="1" fill-rule="evenodd" stroke="none"
+          stroke-dasharray="none" stroke-dashoffset="0" stroke-linecap="butt" stroke-linejoin="miter"
+          stroke-miterlimit="4" stroke-opacity="1" stroke-width="5"
+          d="m50 1.18l-.72 1.25l-6.973 12.062H47.5v42.98l-37.223 21.49l-2.597-4.498L0 87.783h1.441l13.934.008l-2.598-4.498L50 61.803l37.223 21.49l-2.598 4.498L100 87.783l-.72-1.25l-6.96-12.069l-2.597 4.499L52.5 57.473V14.491h5.193z"
+          color="currentColor" color-interpolation="sRGB" color-rendering="auto" display="inline" vector-effect="none"
+          visibility="visible" />
+        <path id="gisCube3d7" fill="currentColor" fill-opacity="1" fill-rule="evenodd" stroke="none"
+          stroke-dasharray="none" stroke-dashoffset="0" stroke-linecap="butt" stroke-linejoin="round"
+          stroke-miterlimit="4" stroke-opacity="1" stroke-width="3.618"
+          d="M49.058 28.451L19.812 47.63c-.674.487-.855 1.041-.867 1.545v28.66c0 .63.328 1.216.867 1.545l29.246 19.178c.705.385 1.422.32 1.898-.01L80.188 79.38a1.81 1.81 0 0 0 .867-1.545v-28.66c-.006-.764-.33-1.167-.895-1.564l-29.218-19.16c-.696-.397-1.242-.208-1.884 0zm.942 3.66l25.515 16.906l-25.531 17.206L24.23 49.174ZM22.56 52.394L48.192 69.37v24.425l-25.63-16.976Zm54.88 0v24.424L51.808 93.794V69.368Z"
+          color="currentColor" color-interpolation="sRGB" color-rendering="auto" display="inline" vector-effect="none"
+          visibility="visible" />
+      </svg>
+      <p class="info">2D</p>
+    </div>
+    <!-- Sign in -->
+    <div class="link">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24">
+        <path fill="currentColor"
+          d="M19 11h-5.586l1.293-1.293a1 1 0 0 0-1.414-1.414l-3 3a1 1 0 0 0 0 1.414l3 3a1 1 0 0 0 1.414-1.414L13.414 13H19a1 1 0 0 0 0-2Z" />
+        <path fill="currentColor"
+          d="m13.414 13l1.293 1.293a1 1 0 1 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.414l3-3a1 1 0 0 1 1.414 1.414L13.414 11H18V5a3.003 3.003 0 0 0-3-3H7a3.003 3.003 0 0 0-3 3v14a3.003 3.003 0 0 0 3 3h8a3.003 3.003 0 0 0 3-3v-6Z"
+          opacity=".5" />
+      </svg>
+      <p class="info">Sign in</p>
+    </div>
+  </div>
+
+  <!-- Suggestion input & facebook -->
+  <footer>
+    <!-- Facebook -->
+    <svg class="facebook-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M19.02 4.975A9.93 9.93 0 0 0 2.07 12A9.935 9.935 0 0 0 12 21.935a9.98 9.98 0 0 0 3.8-.75a10.189 10.189 0 0 0 3.22-2.16a9.934 9.934 0 0 0 0-14.05Zm-.7 13.34a8.921 8.921 0 0 1-5.32 2.57v-6.56h1.88a1 1 0 0 0 0-2H13v-2.74a1 1 0 0 1 1-1h1.2a1 1 0 0 0 0-2h-1.7a2.5 2.5 0 0 0-2.5 2.5v3.24H9.13a1 1 0 1 0 0 2H11v6.56a8.919 8.919 0 1 1 9.26-5.47a9.061 9.061 0 0 1-1.94 2.9Z" />
+    </svg>
+    <!-- Input -->
+    <div class="input-container">
+      <input type="text" name="suggestion" id="suggestion-input" placeholder="Your suggestions...">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M3 20v-6l8-2l-8-2V4l19 8l-19 8Z" />
+      </svg>
+    </div>
+  </footer>
+
+  <script src="src/js/main.js" type="module"></script>
+  <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
