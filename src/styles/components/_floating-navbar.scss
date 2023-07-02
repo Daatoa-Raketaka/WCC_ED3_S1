@@ -1,0 +1,75 @@
+@import "../partials/sizes";
+@import "../partials/font-variables";
+
+.floating-navbar {
+  display: none;
+}
+
+@media screen and (min-width: $tablet-endpoint) {  
+  .floating-navbar {
+    position: absolute;
+    top: 50vh;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: max-content;
+    height: max-content;
+    background-color: $shadow;
+    transform: translateY(-50%);
+    border-radius: 13px;
+    border: 1px solid white;
+
+    * {
+      @include architects_font_family();
+    }
+
+    .link {
+      position: relative;
+      margin-block: 5px;
+      color: $white;
+
+      .icon {
+        cursor: pointer;
+      }
+
+      .info {
+        display: none;
+      }
+
+      .info.active {
+        position: absolute;
+        top: 0;
+        right: -10px;
+        transform: translateX(calc(100% + 20px)) translateY(0);
+        background-color: $shadow;
+        width: max-content;
+        height: 26px; /* Raha sendra mamaky an'ity lah de 26px ny taille anle icon */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-inline: 8px;
+        font-size: 14px;
+        border-radius: 3px;
+        border: 1px solid $white;
+
+        &::before {
+          $icon-size: 26px;
+          $size: 10px;
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          width: $size;
+          height: $size;
+          clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+          transform: translateY(calc(($icon-size / 2) - calc($size / 2))) translateX(calc($size / -2)) rotateZ(-45deg);
+          background-color: $white;
+          z-index: -100;
+        }
+      }
+    }
+  }
+}
