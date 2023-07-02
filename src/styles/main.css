@@ -151,12 +151,14 @@ footer {
   width: 100%;
   height: -moz-max-content;
   height: max-content;
-  background-color: red;
   padding-block: 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+footer .facebook-icon {
+  margin-right: 15px;
 }
 footer .input-container {
   position: relative;
@@ -169,5 +171,16 @@ footer .input-container #suggestion-input {
   position: relative;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid black;
+  font-size: 16px;
+  font-family: "Architects Daughter", sans-serif;
+  font-display: swap;
+  width: 150px;
+}
+
+@media screen and (min-width: 1024px) {
+  footer {
+    justify-content: flex-end;
+    padding-right: 12.5vw;
+    padding-bottom: 35px;
+  }
 }/*# sourceMappingURL=main.css.map */
